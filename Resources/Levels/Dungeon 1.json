@@ -1,0 +1,29 @@
+{ "height":10,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49, 33, 17, 17, 17, 17, 17, 17, 17, 17, 49],
+         "height":10,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":10,
+         "x":0,
+         "y":0
+        }],
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"left-down",
+ "tiledversion":"1.1.2",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"Resources/Images/Terrain.png"
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":1,
+ "width":10
+}

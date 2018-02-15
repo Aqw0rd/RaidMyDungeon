@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RaidMyDungeon"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RaidMyDungeon">
+				<Option output="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/RaidMyDungeon" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 RaidMyDungeon"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RaidMyDungeon/fast">
+				<Option output="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/RaidMyDungeon" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 RaidMyDungeon/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/App.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/App.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Config.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Config.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Map.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Map.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/MapLayer.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/MapLayer.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/State.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/State.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/StateMachine.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/StateMachine.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/States/IntroState.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/States/IntroState.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/States/MainMenuState.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/States/MainMenuState.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/States/PlayState.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/States/PlayState.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/main.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
