@@ -96,6 +96,12 @@
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Config.h">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Map.cpp">
 			<Option target="RaidMyDungeon"/>
 		</Unit>

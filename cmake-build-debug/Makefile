@@ -177,6 +177,33 @@ Config.cpp.s:
 	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Config.cpp.s
 .PHONY : Config.cpp.s
 
+GameObject.o: GameObject.cpp.o
+
+.PHONY : GameObject.o
+
+# target to build an object file
+GameObject.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o
+.PHONY : GameObject.cpp.o
+
+GameObject.i: GameObject.cpp.i
+
+.PHONY : GameObject.i
+
+# target to preprocess a source file
+GameObject.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.i
+.PHONY : GameObject.cpp.i
+
+GameObject.s: GameObject.cpp.s
+
+.PHONY : GameObject.s
+
+# target to generate assembly for a file
+GameObject.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.s
+.PHONY : GameObject.cpp.s
+
 Map.o: Map.cpp.o
 
 .PHONY : Map.o
@@ -408,6 +435,9 @@ help:
 	@echo "... Config.o"
 	@echo "... Config.i"
 	@echo "... Config.s"
+	@echo "... GameObject.o"
+	@echo "... GameObject.i"
+	@echo "... GameObject.s"
 	@echo "... Map.o"
 	@echo "... Map.i"
 	@echo "... Map.s"

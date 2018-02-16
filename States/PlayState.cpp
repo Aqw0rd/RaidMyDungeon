@@ -7,10 +7,11 @@
 #include "../StateMachine.h"
 
 PlayState::PlayState(Config* &config, sf::RenderWindow &window, StateMachine &machine)
+        : State(config, window, machine)
 {
-    this->config = config;
-    this->window = &window;
-    this->machine = &machine;
+    //this->config = config;
+    //this->window = &window;
+    //this->machine = &machine;
 
     // Could be its own state, loadstate
     if(!this->map.loadMap(this->config->getMapPath())){

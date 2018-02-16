@@ -5,6 +5,7 @@
 #include "App.h"
 #include "States/IntroState.h"
 #include <SFML/Window/Event.hpp>
+#include <sstream>
 
 
 App::App()
@@ -29,10 +30,17 @@ void App::run()
 {
 
     sf::Time gametick = clock.restart();        //Initializing the gametick
+    float lastTime = 0;
     while(this->machine.running)
     {
         gametick = clock.restart();             // Restarting the clock
+        float fps = 1.0f / (gametick.asSeconds());
 
+        std::stringstream ss;
+        ss << (int)fps;
+        std::string s;
+        ss >> s;
+        window.setTitle(s);
         // Sending the gametick as milliseconds to the States update function
         machine.getState()->update(gametick.asMilliseconds());
         window.clear();                 // Clearing the SFML window

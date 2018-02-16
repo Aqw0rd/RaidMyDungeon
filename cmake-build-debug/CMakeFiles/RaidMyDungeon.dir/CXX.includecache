@@ -13,6 +13,8 @@ States/IntroState.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/States/IntroState.h
 SFML/Window/Event.hpp
 -
+sstream
+-
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/App.h
 SFML/Graphics/RenderWindow.hpp
@@ -33,6 +35,18 @@ SFML/System/Vector2.hpp
 -
 Map.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/Map.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.cpp
+GameObject.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
+SFML/Graphics/Texture.hpp
+-
+SFML/Graphics/Sprite.hpp
+-
+SFML/Graphics/RenderWindow.hpp
+-
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/Map.cpp
 Map.h
@@ -65,6 +79,8 @@ SFML/Graphics/Sprite.hpp
 -
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/State.cpp
+State.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/State.h
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/State.h
 Config.h

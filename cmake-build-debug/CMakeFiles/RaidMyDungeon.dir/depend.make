@@ -15,6 +15,9 @@ CMakeFiles/RaidMyDungeon.dir/Config.cpp.o: ../Config.h
 CMakeFiles/RaidMyDungeon.dir/Config.cpp.o: ../Map.h
 CMakeFiles/RaidMyDungeon.dir/Config.cpp.o: ../MapLayer.h
 
+CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o: ../GameObject.cpp
+CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o: ../GameObject.h
+
 CMakeFiles/RaidMyDungeon.dir/Map.cpp.o: ../Map.cpp
 CMakeFiles/RaidMyDungeon.dir/Map.cpp.o: ../Map.h
 CMakeFiles/RaidMyDungeon.dir/Map.cpp.o: ../MapLayer.h
@@ -22,7 +25,11 @@ CMakeFiles/RaidMyDungeon.dir/Map.cpp.o: ../MapLayer.h
 CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o: ../MapLayer.cpp
 CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o: ../MapLayer.h
 
+CMakeFiles/RaidMyDungeon.dir/State.cpp.o: ../Config.h
+CMakeFiles/RaidMyDungeon.dir/State.cpp.o: ../Map.h
+CMakeFiles/RaidMyDungeon.dir/State.cpp.o: ../MapLayer.h
 CMakeFiles/RaidMyDungeon.dir/State.cpp.o: ../State.cpp
+CMakeFiles/RaidMyDungeon.dir/State.cpp.o: ../State.h
 
 CMakeFiles/RaidMyDungeon.dir/StateMachine.cpp.o: ../Config.h
 CMakeFiles/RaidMyDungeon.dir/StateMachine.cpp.o: ../Map.h

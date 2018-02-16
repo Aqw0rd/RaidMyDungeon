@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RaidMyDungeon.dir/Map.cpp.o"
   "CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o"
   "CMakeFiles/RaidMyDungeon.dir/States/PlayState.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o"
   "RaidMyDungeon.pdb"
   "RaidMyDungeon"
 )

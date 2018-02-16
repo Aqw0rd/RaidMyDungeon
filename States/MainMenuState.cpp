@@ -15,11 +15,12 @@
  * @param machine   Reference to state machine
  */
 MainMenuState::MainMenuState(Config* &config, sf::RenderWindow &window, StateMachine &machine)
+        : State(config, window, machine)
 {
     std::cout << "MainMenu" << std::endl;
-    this->config = config;
-    this->window = &window;
-    this->machine = &machine;
+    //this->config = config;
+    //this->window = &window;
+    //this->machine = &machine;
 
     this->menuIndex = 0;
 

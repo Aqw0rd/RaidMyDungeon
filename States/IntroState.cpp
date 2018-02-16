@@ -14,11 +14,12 @@
  * @param machine
  */
 IntroState::IntroState(Config* &config, sf::RenderWindow &window, StateMachine &machine)
+            : State(config, window, machine)
 {
     std::cout << "Introstate" << std::endl;
-    this->config = config;
-    this->window = &window;
-    this->machine = &machine;
+    //this->config = config;
+    //this->window = &window;
+    //this->machine = &machine;
     backGroundTexture.loadFromFile("Resources/Images/intro.jpg");
     backGround.setTexture(backGroundTexture, true);
     backGround.setScale( (float) (config->getResolution().x) / (float) (backGroundTexture.getSize().x) ,
