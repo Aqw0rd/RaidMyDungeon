@@ -9,24 +9,24 @@
 PlayState::PlayState(Config* &config, sf::RenderWindow &window, StateMachine &machine)
         : State(config, window, machine)
 {
-    //this->config = config;
-    //this->window = &window;
-    //this->machine = &machine;
-
-    // Could be its own state, loadstate
     if(!this->map.loadMap(this->config->getMapPath())){
         std::cout << "Couldnt load map" << std::endl;
     }
 
+    player = new Player(sf::Vector2f(100,100), 100,100,1, 1.5f,"Resources/Sprites/Anders.png", 16, 16);
 
     std::cout << "Playstate" << std::endl;
 }
 
-PlayState::~PlayState() = default;
+PlayState::~PlayState()
+{
+    delete player;
+}
 
 void PlayState::draw()
 {
     this->map.draw(*window);
+    this->player->draw(*window);
 }
 
 void PlayState::update(float gametick)
@@ -34,6 +34,7 @@ void PlayState::update(float gametick)
     sf::Event event;
     while( window->pollEvent(event ))
     {
+        this->player->eventHandler(event);
         switch (event.type)
         {
             case sf::Event::Closed:
@@ -44,5 +45,8 @@ void PlayState::update(float gametick)
                 break;
         }
     }
+
+    this->player->update(gametick);
+
 
 }

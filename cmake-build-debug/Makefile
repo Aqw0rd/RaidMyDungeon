@@ -258,6 +258,33 @@ MapLayer.cpp.s:
 	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.s
 .PHONY : MapLayer.cpp.s
 
+Player.o: Player.cpp.o
+
+.PHONY : Player.o
+
+# target to build an object file
+Player.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.o
+.PHONY : Player.cpp.o
+
+Player.i: Player.cpp.i
+
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
 State.o: State.cpp.o
 
 .PHONY : State.o
@@ -444,6 +471,9 @@ help:
 	@echo "... MapLayer.o"
 	@echo "... MapLayer.i"
 	@echo "... MapLayer.s"
+	@echo "... Player.o"
+	@echo "... Player.i"
+	@echo "... Player.s"
 	@echo "... State.o"
 	@echo "... State.i"
 	@echo "... State.s"

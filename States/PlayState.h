@@ -7,6 +7,7 @@
 
 
 #include "../State.h"
+#include "../Player.h"
 
 class PlayState : public State {
 public:
@@ -17,6 +18,7 @@ public:
 
 protected:
     Map map;
+    Player* player;
 };
 
 

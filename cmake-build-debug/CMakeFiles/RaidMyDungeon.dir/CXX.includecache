@@ -37,6 +37,8 @@ Map.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/Map.h
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.cpp
+iostream
+-
 GameObject.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
 
@@ -77,6 +79,18 @@ MapLayer.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/MapLayer.h
 SFML/Graphics/Sprite.hpp
 -
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp
+iostream
+-
+Player.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h
+SFML/Window/Event.hpp
+-
+GameObject.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/State.cpp
 State.h
@@ -155,6 +169,8 @@ PlayState.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/States/PlayState.h
 ../State.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/State.h
+../Player.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/main.cpp
 iostream

@@ -12,7 +12,7 @@ class MapLayer {
     friend class Map;
 public:
     MapLayer(){}
-    ~MapLayer(){ delete [] tileIds;  delete [] tiles; }
+    ~MapLayer() = default;
 
 protected:
     int width, height;

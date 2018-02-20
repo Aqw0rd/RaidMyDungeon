@@ -11,7 +11,13 @@ Map::Map() {}
 
 Map::~Map()
 {
-    delete [] mapLayers;
+    for(int i = 0; i < layerCount; i++) {
+        for (int y = 0; y < height; y++) {
+            delete [] this->mapLayers[i].tiles[y];
+        }
+        delete [] this->mapLayers[i].tiles;
+    }
+    delete [] this->mapLayers;
 }
 
 bool Map::loadMap(const char *filePath)

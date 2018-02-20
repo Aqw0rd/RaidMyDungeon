@@ -114,6 +114,12 @@
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/MapLayer.h">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/State.cpp">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
