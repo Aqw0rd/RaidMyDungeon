@@ -321,28 +321,148 @@ CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o.provides: CMakeFiles/RaidMyDungeon
 CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o
 
 
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.o: ../Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Player.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o: ../Objects/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.cpp
 
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp > CMakeFiles/RaidMyDungeon.dir/Player.cpp.i
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.cpp > CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.i
 
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp -o CMakeFiles/RaidMyDungeon.dir/Player.cpp.s
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.cpp -o CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.s
 
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.requires:
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.requires:
 
-.PHONY : CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.requires
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.requires
 
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.requires
-	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.provides.build
-.PHONY : CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.provides
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.provides
 
-CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Player.cpp.o
+CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o
+
+
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o: ../Ability.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Ability.cpp
+
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Ability.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Ability.cpp > CMakeFiles/RaidMyDungeon.dir/Ability.cpp.i
+
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Ability.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Ability.cpp -o CMakeFiles/RaidMyDungeon.dir/Ability.cpp.s
+
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.requires:
+
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.requires
+
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.provides.build
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.provides
+
+CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o
+
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o: ../Abilities/Melee.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.cpp
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.cpp > CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.i
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.cpp -o CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.s
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.requires:
+
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.requires
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.provides.build
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.provides
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o
+
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o: ../Abilities/Melee/NormalAttack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.cpp
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.cpp > CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.i
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.cpp -o CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.s
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.requires:
+
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.requires
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.provides.build
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.provides
+
+CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o
+
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o: ../Items/Weapon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.cpp
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.cpp > CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.i
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.cpp -o CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.s
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.requires:
+
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.requires
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.provides.build
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.provides
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o
+
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o: CMakeFiles/RaidMyDungeon.dir/flags.make
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o: ../Items/Weapons/IronSword.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o -c /home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.cpp
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.cpp > CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.i
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.cpp -o CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.s
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.requires:
+
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.requires
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.provides: CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.provides.build
+.PHONY : CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.provides
+
+CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.provides.build: CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o
 
 
 # Object files for target RaidMyDungeon
@@ -358,7 +478,12 @@ RaidMyDungeon_OBJECTS = \
 "CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o" \
 "CMakeFiles/RaidMyDungeon.dir/States/PlayState.cpp.o" \
 "CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o" \
-"CMakeFiles/RaidMyDungeon.dir/Player.cpp.o"
+"CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o" \
+"CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o" \
+"CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o" \
+"CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o" \
+"CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o" \
+"CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o"
 
 # External object files for target RaidMyDungeon
 RaidMyDungeon_EXTERNAL_OBJECTS =
@@ -374,10 +499,15 @@ RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Map.cpp.o
 RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o
 RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/States/PlayState.cpp.o
 RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o
-RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Player.cpp.o
+RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o
+RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o
+RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o
+RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o
+RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o
+RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o
 RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/build.make
 RaidMyDungeon: CMakeFiles/RaidMyDungeon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable RaidMyDungeon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable RaidMyDungeon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RaidMyDungeon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -396,7 +526,12 @@ CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Map.cpp.o.re
 CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o.requires
 CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/States/PlayState.cpp.o.requires
 CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o.requires
-CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Player.cpp.o.requires
+CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o.requires
+CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o.requires
+CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o.requires
+CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o.requires
+CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o.requires
+CMakeFiles/RaidMyDungeon.dir/requires: CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o.requires
 
 .PHONY : CMakeFiles/RaidMyDungeon.dir/requires
 

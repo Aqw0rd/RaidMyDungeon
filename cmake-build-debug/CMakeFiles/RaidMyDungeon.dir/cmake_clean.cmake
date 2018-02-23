@@ -10,7 +10,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.o"
   "CMakeFiles/RaidMyDungeon.dir/States/PlayState.cpp.o"
   "CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.o"
-  "CMakeFiles/RaidMyDungeon.dir/Player.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o"
   "RaidMyDungeon.pdb"
   "RaidMyDungeon"
 )

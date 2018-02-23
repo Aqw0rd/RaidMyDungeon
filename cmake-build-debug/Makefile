@@ -123,6 +123,87 @@ RaidMyDungeon/fast:
 	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/build
 .PHONY : RaidMyDungeon/fast
 
+Abilities/Melee.o: Abilities/Melee.cpp.o
+
+.PHONY : Abilities/Melee.o
+
+# target to build an object file
+Abilities/Melee.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.o
+.PHONY : Abilities/Melee.cpp.o
+
+Abilities/Melee.i: Abilities/Melee.cpp.i
+
+.PHONY : Abilities/Melee.i
+
+# target to preprocess a source file
+Abilities/Melee.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.i
+.PHONY : Abilities/Melee.cpp.i
+
+Abilities/Melee.s: Abilities/Melee.cpp.s
+
+.PHONY : Abilities/Melee.s
+
+# target to generate assembly for a file
+Abilities/Melee.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee.cpp.s
+.PHONY : Abilities/Melee.cpp.s
+
+Abilities/Melee/NormalAttack.o: Abilities/Melee/NormalAttack.cpp.o
+
+.PHONY : Abilities/Melee/NormalAttack.o
+
+# target to build an object file
+Abilities/Melee/NormalAttack.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o
+.PHONY : Abilities/Melee/NormalAttack.cpp.o
+
+Abilities/Melee/NormalAttack.i: Abilities/Melee/NormalAttack.cpp.i
+
+.PHONY : Abilities/Melee/NormalAttack.i
+
+# target to preprocess a source file
+Abilities/Melee/NormalAttack.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.i
+.PHONY : Abilities/Melee/NormalAttack.cpp.i
+
+Abilities/Melee/NormalAttack.s: Abilities/Melee/NormalAttack.cpp.s
+
+.PHONY : Abilities/Melee/NormalAttack.s
+
+# target to generate assembly for a file
+Abilities/Melee/NormalAttack.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.s
+.PHONY : Abilities/Melee/NormalAttack.cpp.s
+
+Ability.o: Ability.cpp.o
+
+.PHONY : Ability.o
+
+# target to build an object file
+Ability.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Ability.cpp.o
+.PHONY : Ability.cpp.o
+
+Ability.i: Ability.cpp.i
+
+.PHONY : Ability.i
+
+# target to preprocess a source file
+Ability.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Ability.cpp.i
+.PHONY : Ability.cpp.i
+
+Ability.s: Ability.cpp.s
+
+.PHONY : Ability.s
+
+# target to generate assembly for a file
+Ability.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Ability.cpp.s
+.PHONY : Ability.cpp.s
+
 App.o: App.cpp.o
 
 .PHONY : App.o
@@ -204,6 +285,60 @@ GameObject.cpp.s:
 	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/GameObject.cpp.s
 .PHONY : GameObject.cpp.s
 
+Items/Weapon.o: Items/Weapon.cpp.o
+
+.PHONY : Items/Weapon.o
+
+# target to build an object file
+Items/Weapon.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o
+.PHONY : Items/Weapon.cpp.o
+
+Items/Weapon.i: Items/Weapon.cpp.i
+
+.PHONY : Items/Weapon.i
+
+# target to preprocess a source file
+Items/Weapon.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.i
+.PHONY : Items/Weapon.cpp.i
+
+Items/Weapon.s: Items/Weapon.cpp.s
+
+.PHONY : Items/Weapon.s
+
+# target to generate assembly for a file
+Items/Weapon.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.s
+.PHONY : Items/Weapon.cpp.s
+
+Items/Weapons/IronSword.o: Items/Weapons/IronSword.cpp.o
+
+.PHONY : Items/Weapons/IronSword.o
+
+# target to build an object file
+Items/Weapons/IronSword.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o
+.PHONY : Items/Weapons/IronSword.cpp.o
+
+Items/Weapons/IronSword.i: Items/Weapons/IronSword.cpp.i
+
+.PHONY : Items/Weapons/IronSword.i
+
+# target to preprocess a source file
+Items/Weapons/IronSword.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.i
+.PHONY : Items/Weapons/IronSword.cpp.i
+
+Items/Weapons/IronSword.s: Items/Weapons/IronSword.cpp.s
+
+.PHONY : Items/Weapons/IronSword.s
+
+# target to generate assembly for a file
+Items/Weapons/IronSword.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.s
+.PHONY : Items/Weapons/IronSword.cpp.s
+
 Map.o: Map.cpp.o
 
 .PHONY : Map.o
@@ -258,32 +393,32 @@ MapLayer.cpp.s:
 	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/MapLayer.cpp.s
 .PHONY : MapLayer.cpp.s
 
-Player.o: Player.cpp.o
+Objects/Player.o: Objects/Player.cpp.o
 
-.PHONY : Player.o
+.PHONY : Objects/Player.o
 
 # target to build an object file
-Player.cpp.o:
-	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.o
-.PHONY : Player.cpp.o
+Objects/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.o
+.PHONY : Objects/Player.cpp.o
 
-Player.i: Player.cpp.i
+Objects/Player.i: Objects/Player.cpp.i
 
-.PHONY : Player.i
+.PHONY : Objects/Player.i
 
 # target to preprocess a source file
-Player.cpp.i:
-	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.i
-.PHONY : Player.cpp.i
+Objects/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.i
+.PHONY : Objects/Player.cpp.i
 
-Player.s: Player.cpp.s
+Objects/Player.s: Objects/Player.cpp.s
 
-.PHONY : Player.s
+.PHONY : Objects/Player.s
 
 # target to generate assembly for a file
-Player.cpp.s:
-	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Player.cpp.s
-.PHONY : Player.cpp.s
+Objects/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/RaidMyDungeon.dir/build.make CMakeFiles/RaidMyDungeon.dir/Objects/Player.cpp.s
+.PHONY : Objects/Player.cpp.s
 
 State.o: State.cpp.o
 
@@ -456,6 +591,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... RaidMyDungeon"
+	@echo "... Abilities/Melee.o"
+	@echo "... Abilities/Melee.i"
+	@echo "... Abilities/Melee.s"
+	@echo "... Abilities/Melee/NormalAttack.o"
+	@echo "... Abilities/Melee/NormalAttack.i"
+	@echo "... Abilities/Melee/NormalAttack.s"
+	@echo "... Ability.o"
+	@echo "... Ability.i"
+	@echo "... Ability.s"
 	@echo "... App.o"
 	@echo "... App.i"
 	@echo "... App.s"
@@ -465,15 +609,21 @@ help:
 	@echo "... GameObject.o"
 	@echo "... GameObject.i"
 	@echo "... GameObject.s"
+	@echo "... Items/Weapon.o"
+	@echo "... Items/Weapon.i"
+	@echo "... Items/Weapon.s"
+	@echo "... Items/Weapons/IronSword.o"
+	@echo "... Items/Weapons/IronSword.i"
+	@echo "... Items/Weapons/IronSword.s"
 	@echo "... Map.o"
 	@echo "... Map.i"
 	@echo "... Map.s"
 	@echo "... MapLayer.o"
 	@echo "... MapLayer.i"
 	@echo "... MapLayer.s"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Player.s"
+	@echo "... Objects/Player.o"
+	@echo "... Objects/Player.i"
+	@echo "... Objects/Player.s"
 	@echo "... State.o"
 	@echo "... State.i"
 	@echo "... State.s"

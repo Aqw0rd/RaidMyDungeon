@@ -6,6 +6,36 @@
 
 #IncludeRegexTransform: 
 
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.cpp
+Melee.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.h
+../Ability.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Ability.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.cpp
+NormalAttack.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.h
+../Melee.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Ability.cpp
+Ability.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Ability.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Ability.h
+SFML/Graphics/Texture.hpp
+-
+SFML/Graphics/Sprite.hpp
+-
+SFML/Graphics/RenderWindow.hpp
+-
+GameObject.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
+
 /home/andershorgen/CLionProjects/RaidMyDungeon/App.cpp
 App.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/App.h
@@ -50,6 +80,28 @@ SFML/Graphics/Sprite.hpp
 SFML/Graphics/RenderWindow.hpp
 -
 
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.cpp
+Weapon.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.h
+SFML/Graphics/Texture.hpp
+-
+SFML/Graphics/Sprite.hpp
+-
+SFML/Graphics/RenderWindow.hpp
+-
+../GameObject.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.cpp
+IronSword.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.h
+
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.h
+../Weapon.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.h
+
 /home/andershorgen/CLionProjects/RaidMyDungeon/Map.cpp
 Map.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/Map.h
@@ -80,17 +132,21 @@ MapLayer.h
 SFML/Graphics/Sprite.hpp
 -
 
-/home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp
+/home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.cpp
 iostream
 -
 Player.h
-/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.h
+../Items/Weapons/IronSword.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.h
 
-/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.h
 SFML/Window/Event.hpp
 -
-GameObject.h
+../GameObject.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h
+../Items/Weapon.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.h
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/State.cpp
 State.h
@@ -169,8 +225,8 @@ PlayState.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/States/PlayState.h
 ../State.h
 /home/andershorgen/CLionProjects/RaidMyDungeon/State.h
-../Player.h
-/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h
+../Objects/Player.h
+/home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.h
 
 /home/andershorgen/CLionProjects/RaidMyDungeon/main.cpp
 iostream

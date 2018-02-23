@@ -13,8 +13,7 @@ PlayState::PlayState(Config* &config, sf::RenderWindow &window, StateMachine &ma
         std::cout << "Couldnt load map" << std::endl;
     }
 
-    player = new Player(sf::Vector2f(100,100), 100,100,1, 1.5f,"Resources/Sprites/Anders.png", 16, 16);
-
+    player = new Player(sf::Vector2f(100,100), 100,100,1, 1.5f,"Resources/Sprites/Squarey.png", 16, 16);
     std::cout << "Playstate" << std::endl;
 }
 
@@ -31,6 +30,8 @@ void PlayState::draw()
 
 void PlayState::update(float gametick)
 {
+    this->player->update(gametick);
+
     sf::Event event;
     while( window->pollEvent(event ))
     {
@@ -41,12 +42,13 @@ void PlayState::update(float gametick)
                 machine->running = false;
                 break;
 
+            case sf::Event::KeyPressed:
+                if(event.key.code == sf::Keyboard::Escape){
+                    this->machine->popState();
+                }
+
             default:
                 break;
         }
     }
-
-    this->player->update(gametick);
-
-
 }

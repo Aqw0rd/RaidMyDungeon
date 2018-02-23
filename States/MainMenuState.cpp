@@ -88,7 +88,7 @@ void MainMenuState::update(float gametick)
                 {
                     options[menuIndex].setColor(sf::Color::Yellow);
                     this->menuIndex++;
-                    if(this->menuIndex >= sizeof(options)/sizeof(*options))
+                    if(this->menuIndex >= (int)(sizeof(options)/sizeof(*options)))
                         this->menuIndex = 0;
                 }
 
@@ -108,6 +108,9 @@ void MainMenuState::update(float gametick)
                             break;
                     }
                 }
+
+            default:
+                break;
 
         }
     }

@@ -30,12 +30,12 @@ void Config::setResolution(unsigned int x, unsigned int y)
 
 std::string Config::getImagePath() const
 {
-    this->imagePath;
+    return this->imagePath;
 }
 
 std::string Config::getSpritePath() const
 {
-    this->spritePath;
+    return this->spritePath;
 }
 
 /**

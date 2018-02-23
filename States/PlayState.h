@@ -7,7 +7,7 @@
 
 
 #include "../State.h"
-#include "../Player.h"
+#include "../Objects/Player.h"
 
 class PlayState : public State {
 public:

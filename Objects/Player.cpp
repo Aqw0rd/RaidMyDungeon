@@ -4,19 +4,36 @@
 
 #include <iostream>
 #include "Player.h"
+#include "../Items/Weapons/IronSword.h"
 
+# define M_PI           3.14159265358979323846
 
 Player::Player(sf::Vector2f pos, int maxHp, int maxEnergy, int lvl, float speed, char const* texturePath, int width, int height)
     : GameObject(pos, maxHp, maxEnergy, lvl, speed, texturePath, width, height)
 {
-
+    this->weapon = new IronSword("Resources/Sprites/Weapons/sword_iron.png", *this);
 }
 
-Player::~Player() = default;
+//Player::~Player() = default;
 
 void Player::draw(sf::RenderWindow &window)
 {
     window.draw(this->sprite[this->spriteX][this->spriteY]);
+
+
+    /** Temporary mouse handler **/
+
+    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+    float targetY = mousePos.y - this->pos.y;
+    float targetX = mousePos.x - this->pos.x;
+    float angle = atan2f(targetY, targetX) * 180 / M_PI;
+
+    if(angle <= 45 && angle > -45)          this->spriteY = right;
+    else if(angle <= 135 && angle > 45)     this->spriteY = down;
+    else if(angle >= -135 && angle > 135)   this->spriteY = left;
+    else if(angle <= -45 && angle > -135)   this->spriteY = up;
+
+    /** ----------------------- **/
 }
 
 /**
@@ -27,14 +44,15 @@ void Player::draw(sf::RenderWindow &window)
  */
 void Player::update(float gametick)
 {
-    float multiplier = (gametick/1000) * 60;            // Gametick multiplier based of 60fps\
+    float multiplier = (gametick/1000) * 60;            // Gametick multiplier based of 60fps
 
     movement();
     animation(gametick);
-
     this->pos.x += this->vel.x * multiplier;
     this->pos.y += this->vel.y * multiplier;
     sprite[this->spriteX][this->spriteY].setPosition(this->pos);
+
+
 }
 
 /**
@@ -102,66 +120,43 @@ void Player::eventHandler(sf::Event event)
 void Player::movement()
 {
     ///Left and Right ///
-    if(keys[0])
-    {
-        this->vel.x = -this->speed;
-        this->spriteY = left;
-    }
-
-    else if(keys[2])
-    {
-        this->vel.x = this->speed;
-        this->spriteY = right;
-    }
-
-    else this->vel.x = 0;
+    if(keys[0])         this->vel.x = -this->speed;
+    else if(keys[2])    this->vel.x = this->speed;
+    else                this->vel.x = 0;
 
     /// Up and down ///
-    if(keys[1])
-    {
-        this->vel.y = -this->speed;
-        this->spriteY = up;
-    }
+    if(keys[1])         this->vel.y = -this->speed;
+    else if(keys[3])    this->vel.y = this->speed;
+    else                this->vel.y = 0;
 
-    else if(keys[3])
-    {
-        this->vel.y = this->speed;
-        this->spriteY = down;
-    }
-
-    else this->vel.y = 0;
-
-    if(this->vel != sf::Vector2f(0,0)) this->walking = true;
-    else this->walking = false;
+    if(this->vel != sf::Vector2f(0,0))  this->walking = true;
+    else                                this->walking = false;
 
     /// Diagonal handler ///
     double newspeed = sqrt((this->speed * this->speed) / 2);
+
     if(keys[0] && keys[3])
     {
         this->vel.x = (float) newspeed * (-1);
-        this->vel.y = (float) newspeed;
-        this->spriteY = left;
+        this->vel.y = (float) newspeed;;
     }
 
     else if(keys[0] && keys[1])
     {
         this->vel.x = (float) newspeed * (-1);
         this->vel.y = (float) newspeed * (-1);
-        this->spriteY = left;
     }
 
     else if(keys[2] && keys[3])
     {
         this->vel.x = (float) newspeed;
         this->vel.y = (float) newspeed;
-        this->spriteY = right;
     }
 
     else if(keys[2] && keys[1])
     {
         this->vel.x = (float) newspeed;
         this->vel.y = (float) newspeed * (-1);
-        this->spriteY = right;
     }
 }
 
@@ -178,10 +173,10 @@ void Player::animation(float gametick)
         if(this->animationCounter >= this->animationTime)
         {
             this->animationCounter = 0;
-            if(++this->spriteX >= 12) this->spriteX = 0;
+            if(++this->spriteX >= this->tilewidth) this->spriteX = 0;
         }
-    }else{
-        this->spriteX = 0;      // Reset the animation to the start tile
     }
+
+    else this->spriteX = 0;      // Reset the animation to the start tile
 
 }

@@ -27,7 +27,7 @@ void StateMachine::pushState(State *state)
  */
 void StateMachine::popState()
 {
-    auto temp = this->state[this->state.size() - 1];
+    auto &temp = this->state[this->state.size() - 1];
     this->state.pop_back();
     delete temp;
 }

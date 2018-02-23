@@ -84,6 +84,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Abilities/Melee/NormalAttack.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Ability.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Ability.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/App.cpp">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
@@ -102,6 +120,18 @@
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapons/IronSword.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Map.cpp">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
@@ -114,10 +144,10 @@
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/MapLayer.h">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
-		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Player.cpp">
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.cpp">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
-		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Player.h">
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Objects/Player.h">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/State.cpp">

@@ -16,7 +16,7 @@ class StateMachine;     // Since State needs to know of StateMachine, and StateM
 class State {
 public:
     State(Config* &config, sf::RenderWindow &window, StateMachine &machine);
-    ~State() = default;
+    virtual ~State() = default;
     virtual void update(float gametick) = 0;    // Update function for the states
     virtual void draw() = 0;                    // Draw function for the states
 protected:

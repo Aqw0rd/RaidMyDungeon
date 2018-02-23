@@ -30,7 +30,6 @@ void App::run()
 {
 
     sf::Time gametick = clock.restart();        //Initializing the gametick
-    float lastTime = 0;
     while(this->machine.running)
     {
         gametick = clock.restart();             // Restarting the clock
