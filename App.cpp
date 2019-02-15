@@ -6,6 +6,7 @@
 #include "States/IntroState.h"
 #include <SFML/Window/Event.hpp>
 #include <sstream>
+#include <iostream>
 
 
 App::App()
@@ -22,8 +23,10 @@ App::App()
 
 App::~App()
 {
+    std::cout << "Deleting App" << std::endl;
     // Delete the config pointer when app is destructed.
     delete config;
+
 }
 
 void App::run()

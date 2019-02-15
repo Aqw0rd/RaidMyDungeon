@@ -1,0 +1,1 @@
+Only call "delete" as many times as "new" have been called. deleting a pointer deletes the pointed to memory allocation.

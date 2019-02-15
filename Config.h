@@ -28,6 +28,7 @@ protected:
     std::string imagePath;
     std::string resourcePath;
     const char* mapPath;
+
 };
 
 

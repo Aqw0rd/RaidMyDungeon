@@ -44,6 +44,11 @@ MainMenuState::MainMenuState(Config* &config, sf::RenderWindow &window, StateMac
 
 }
 
+MainMenuState::~MainMenuState()
+{
+    std::cout << "Deleting MainMenuState" << std::endl;
+}
+
 /**
  * Draw function, where all the MainMenu items are drawn
  */

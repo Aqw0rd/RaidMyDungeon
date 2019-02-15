@@ -14,7 +14,7 @@
 class MainMenuState : public State {
 public:
     MainMenuState(Config* &config, sf::RenderWindow &window, StateMachine &machine);
-    ~MainMenuState() = default;
+    ~MainMenuState();
     void draw() override;                       // See state.h
     void update(float gametick) override;       // See state.h
 

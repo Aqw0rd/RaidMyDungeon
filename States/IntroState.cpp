@@ -26,7 +26,10 @@ IntroState::IntroState(Config* &config, sf::RenderWindow &window, StateMachine &
                          (float) (config->getResolution().y) / (float) (backGroundTexture.getSize().y) );
 }
 
-IntroState::~IntroState() = default;
+IntroState::~IntroState()
+{
+    std::cout << "Deleting IntroState" << std::endl;
+}
 
 void IntroState::draw()
 {

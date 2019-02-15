@@ -16,6 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RaidMyDungeon.dir/Abilities/Melee/NormalAttack.cpp.o"
   "CMakeFiles/RaidMyDungeon.dir/Items/Weapon.cpp.o"
   "CMakeFiles/RaidMyDungeon.dir/Items/Weapons/IronSword.cpp.o"
+  "CMakeFiles/RaidMyDungeon.dir/Item.cpp.o"
   "RaidMyDungeon.pdb"
   "RaidMyDungeon"
 )

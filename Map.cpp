@@ -14,8 +14,10 @@ Map::~Map()
     for(int i = 0; i < layerCount; i++) {
         for (int y = 0; y < height; y++) {
             delete [] this->mapLayers[i].tiles[y];
+            delete [] this->mapLayers[i].tileIds[y];
         }
         delete [] this->mapLayers[i].tiles;
+        delete [] this->mapLayers[i].tileIds;
     }
     delete [] this->mapLayers;
 }

@@ -13,7 +13,7 @@
 class Player : public GameObject{
 public:
     Player(sf::Vector2f pos, int maxHp, int maxEnergy, int lvl, float speed, const char *texturePath, int width, int height);
-    //virtual ~Player();
+    ~Player();
     void draw(sf::RenderWindow &window) override;
     void update(float gametick) override;
     void eventHandler(sf::Event event);

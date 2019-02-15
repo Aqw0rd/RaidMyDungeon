@@ -20,10 +20,13 @@ public:
     sf::Vector2f getPosition() const;
     sf::Vector2f getVelocity() const;
     sf::Vector2f getAcceleration() const;
+    int getDirection() const;
 
     int getHealth() const;
     int getEnergy() const;
     int getLvl() const;
+
+    enum direction { left = 0, right = 2, up = 1, down = 3};
 
 protected:
     sf::Vector2f pos, vel, acc;             // Position, velocity and acceleration of object
@@ -32,7 +35,7 @@ protected:
     float speed;
     sf::Texture texture;                    // Texture of object
     sf::Sprite** sprite;                    // Sprite
-    enum direction { left = 0, right = 2, up = 1, down = 3};
+
     int spriteX = 0, spriteY = 0;           // Spritesheet coords
     int width, height;
     int tileheight, tilewidth;

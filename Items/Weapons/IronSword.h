@@ -8,17 +8,22 @@
 
 #include "../Weapon.h"
 
-class IronSword : Weapon {
+class IronSword : public Weapon {
 public:
     IronSword(const char * path, GameObject &object);
     ~IronSword() = default;
     void draw(sf::RenderWindow &window) override;
-    void update(float gametick, GameObject &object) override;
+    void strike() override;
+    void update(float gametick) override;
 
 protected:
     int itemlevel, damage;
+    GameObject *object = nullptr;
     bool visible = false;
-    float x = 0, y = 0;
+    sf::Vector2f pos;
+    bool attack = false;
+    int rotation = 0;
+    int direction = GameObject::right;
 
 };
 

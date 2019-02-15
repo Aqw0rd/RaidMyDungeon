@@ -19,6 +19,7 @@ PlayState::PlayState(Config* &config, sf::RenderWindow &window, StateMachine &ma
 
 PlayState::~PlayState()
 {
+    std::cout << "Deleted PlayState" << std::endl;
     delete player;
 }
 

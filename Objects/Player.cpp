@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <math.h>
 #include "Player.h"
 #include "../Items/Weapons/IronSword.h"
 
@@ -14,11 +15,12 @@ Player::Player(sf::Vector2f pos, int maxHp, int maxEnergy, int lvl, float speed,
     this->weapon = new IronSword("Resources/Sprites/Weapons/sword_iron.png", *this);
 }
 
-//Player::~Player() = default;
+Player::~Player() = default;
 
 void Player::draw(sf::RenderWindow &window)
 {
     window.draw(this->sprite[this->spriteX][this->spriteY]);
+    this->weapon->draw(window);
 
 
     /** Temporary mouse handler **/
@@ -44,6 +46,7 @@ void Player::draw(sf::RenderWindow &window)
  */
 void Player::update(float gametick)
 {
+
     float multiplier = (gametick/1000) * 60;            // Gametick multiplier based of 60fps
 
     movement();
@@ -52,7 +55,7 @@ void Player::update(float gametick)
     this->pos.y += this->vel.y * multiplier;
     sprite[this->spriteX][this->spriteY].setPosition(this->pos);
 
-
+    this->weapon->update(gametick);
 }
 
 /**
@@ -106,6 +109,20 @@ void Player::eventHandler(sf::Event event)
             case sf::Keyboard::D:
                 this->keys[2] = false;
                 break;
+
+            default:
+                break;
+        }
+    }
+
+    if(event.type == sf::Event::MouseButtonPressed)
+    {
+        switch (event.mouseButton.button)
+        {
+            case sf::Mouse::Left:
+                this->weapon->strike();
+                break;
+
 
             default:
                 break;

@@ -16,7 +16,8 @@ public:
     Weapon(const char * spritePath);
     virtual ~Weapon() = default;
     virtual void draw(sf::RenderWindow &window) = 0;
-    virtual void update(float gametick, GameObject &object) = 0;
+    virtual void strike() = 0;
+    virtual void update(float gametick) = 0;
 
 protected:
     sf::Texture texture;

@@ -120,6 +120,12 @@
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/GameObject.h">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Item.cpp">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
+		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Item.h">
+			<Option target="RaidMyDungeon"/>
+		</Unit>
 		<Unit filename="/home/andershorgen/CLionProjects/RaidMyDungeon/Items/Weapon.cpp">
 			<Option target="RaidMyDungeon"/>
 		</Unit>
