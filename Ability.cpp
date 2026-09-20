@@ -5,6 +5,7 @@
 #include "Ability.h"
 
 Ability::Ability(const char * path)
+    : icon(iconTexture)
 {
 
 }

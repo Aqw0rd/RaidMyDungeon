@@ -7,6 +7,7 @@
 
 
 #include <SFML/Graphics/Sprite.hpp>
+#include <vector>
 
 class MapLayer {
     friend class Map;
@@ -17,7 +18,7 @@ public:
 protected:
     int width, height;
     int** tileIds;
-    sf::Sprite** tiles;
+    std::vector<std::vector<sf::Sprite>> tiles;
 
 };
 

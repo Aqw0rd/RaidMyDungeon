@@ -13,7 +13,7 @@
 class Item {
 public:
     Item();
-    ~Item();
+    virtual ~Item() = default;
     virtual void draw(sf::RenderWindow &window) = 0;        //Needs to be pure virtual, e.g = 0
     virtual void update(float gametick) = 0;
 

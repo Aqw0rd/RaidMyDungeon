@@ -19,10 +19,10 @@ public:
     void update(float gametick) override;       // See state.h
 
 protected:
-    sf::Text title;         // Menu Title
-    sf::Text options[2];    // Menu options
     sf::Font title_font;    // Font of title
     sf::Font optionsFont;   // Options Font
+    sf::Text title;         // Menu Title
+    sf::Text options[2];    // Menu options
     int menuIndex;          // Helping variable, which option is selected.
 };
 

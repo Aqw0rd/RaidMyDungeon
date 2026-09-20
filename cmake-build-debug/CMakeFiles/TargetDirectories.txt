@@ -1,3 +1,0 @@
-/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/andershorgen/CLionProjects/RaidMyDungeon/cmake-build-debug/CMakeFiles/RaidMyDungeon.dir

@@ -2,7 +2,6 @@
 // Created by andershorgen on 2/23/18.
 //
 
-#include <iostream>
 #include "IronSword.h"
 
 IronSword::IronSword(const char * path, GameObject &object) :  Weapon(path)
@@ -14,19 +13,20 @@ IronSword::IronSword(const char * path, GameObject &object) :  Weapon(path)
 void IronSword::draw(sf::RenderWindow &window)
 {
 
-    window.draw(this->sprite);
     if(this->visible){
+
+        window.draw(this->sprite);
 
         if(attack)
         {
-            if(this->sprite.getRotation() > (rotation + 180) % 360)
+            if(this->sprite.getRotation().asDegrees() > (rotation + 180) % 360)
             {
-                this->sprite.rotate(10.0f);
+                this->sprite.rotate(sf::degrees(10.0f));
             }
             else
             {
                 attack = false;
-                this->sprite.setRotation(rotation);
+                this->sprite.setRotation(sf::degrees(rotation));
                 visible = false;
             }
         }
@@ -47,20 +47,20 @@ void IronSword::strike()
 
 void IronSword::update(float gametick)
 {
-    this->sprite.setPosition(this->object->getPosition().x + 32, this->object->getPosition().y + 32);
+    this->sprite.setPosition(sf::Vector2f(this->object->getPosition().x + 32, this->object->getPosition().y + 32));
 
     if(!attack)
     {
         switch (this->object->getDirection()) {
             case GameObject::right:
-                this->sprite.setOrigin(0, 32);
+                this->sprite.setOrigin(sf::Vector2f(0, 32));
                 rotation = 270;
-                this->sprite.setRotation(rotation);
+                this->sprite.setRotation(sf::degrees(rotation));
                 break;
             case GameObject::left:
-                this->sprite.setOrigin(0, 0);
+                this->sprite.setOrigin(sf::Vector2f(0, 0));
                 rotation = 180;
-                this->sprite.setRotation(rotation);
+                this->sprite.setRotation(sf::degrees(rotation));
                 break;
 
             default:

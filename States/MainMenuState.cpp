@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "MainMenuState.h"
-#include "../Map.h"
 #include "PlayState.h"
 
 /**
@@ -15,7 +14,7 @@
  * @param machine   Reference to state machine
  */
 MainMenuState::MainMenuState(Config* &config, sf::RenderWindow &window, StateMachine &machine)
-        : State(config, window, machine)
+        : State(config, window, machine), title(title_font), options{sf::Text(title_font), sf::Text(title_font)}
 {
     std::cout << "MainMenu" << std::endl;
     //this->config = config;
@@ -24,22 +23,19 @@ MainMenuState::MainMenuState(Config* &config, sf::RenderWindow &window, StateMac
 
     this->menuIndex = 0;
 
-    if(!this->title_font.loadFromFile("Resources/Fonts/AmaticSC-Regular.ttf")) {}
+    if(!this->title_font.openFromFile("Resources/Fonts/AmaticSC-Regular.ttf")) {}
 
-    this->title.setFont(title_font);
     this->title.setString("Main Menu");
-    this->title.setColor(sf::Color::Yellow);
-    this->title.setPosition((this->config->getResolution().x/2) - this->title.getCharacterSize(), 20);
+    this->title.setFillColor(sf::Color::Yellow);
+    this->title.setPosition(sf::Vector2f((this->config->getResolution().x / 2.0f) - this->title.getCharacterSize(), 20));
 
-    this->options[0].setFont(title_font);
     this->options[0].setString("Play");
-    this->options[0].setColor(sf::Color::Yellow);
-    this->options[0].setPosition((this->config->getResolution().x/2) - this->title.getCharacterSize(), 200);
+    this->options[0].setFillColor(sf::Color::Yellow);
+    this->options[0].setPosition(sf::Vector2f((this->config->getResolution().x / 2.0f) - this->title.getCharacterSize(), 200));
 
-    this->options[1].setFont(title_font);
     this->options[1].setString("Exit");
-    this->options[1].setColor(sf::Color::Yellow);
-    this->options[1].setPosition((this->config->getResolution().x/2) - this->title.getCharacterSize(), 300);
+    this->options[1].setFillColor(sf::Color::Yellow);
+    this->options[1].setPosition(sf::Vector2f((this->config->getResolution().x / 2.0f) - this->title.getCharacterSize(), 300));
 
 
 }
@@ -71,56 +67,51 @@ void MainMenuState::draw()
  */
 void MainMenuState::update(float gametick)
 {
-    sf::Event event;
-    while( window->pollEvent( event ))
+    while (const std::optional event = window->pollEvent())
     {
-        switch( event.type )
+        if (event->is<sf::Event::Closed>())
         {
-            case sf::Event::Closed:
-                machine->running = false;
-                break;
+            machine->running = false;
+        }
 
-            case sf::Event::KeyPressed:
-                if(event.key.code == sf::Keyboard::W || event.key.code == sf::Keyboard::Up)
-                {
-                    options[menuIndex].setColor(sf::Color::Yellow);
-                    this->menuIndex--;
-                    if(this->menuIndex < 0 )
-                        this->menuIndex = sizeof(options)/sizeof(*options) - 1;
+        if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+        {
+            if(keyPressed->code == sf::Keyboard::Key::W || keyPressed->code == sf::Keyboard::Key::Up)
+            {
+                options[menuIndex].setFillColor(sf::Color::Yellow);
+                this->menuIndex--;
+                if(this->menuIndex < 0 )
+                    this->menuIndex = sizeof(options)/sizeof(*options) - 1;
+            }
+
+            if(keyPressed->code == sf::Keyboard::Key::S || keyPressed->code == sf::Keyboard::Key::Down)
+            {
+                options[menuIndex].setFillColor(sf::Color::Yellow);
+                this->menuIndex++;
+                if(this->menuIndex >= (int)(sizeof(options)/sizeof(*options)))
+                    this->menuIndex = 0;
+            }
+
+            if(keyPressed->code == sf::Keyboard::Key::Enter)
+            {
+                switch(menuIndex){
+                    case 0:
+                        this->config->setMap("Resources/Levels/Dungeon 1.json");
+                        machine->pushState(new PlayState(config, *window, *machine));
+                        std::cout << "Play" << std::endl;
+                        break;
+                    case 1:
+                        machine->running = false;
+                        break;
+
+                    default:
+                        break;
                 }
-
-                if(event.key.code == sf::Keyboard::S || event.key.code == sf::Keyboard::Down)
-                {
-                    options[menuIndex].setColor(sf::Color::Yellow);
-                    this->menuIndex++;
-                    if(this->menuIndex >= (int)(sizeof(options)/sizeof(*options)))
-                        this->menuIndex = 0;
-                }
-
-                if(event.key.code == sf::Keyboard::Return)
-                {
-                    switch(menuIndex){
-                        case 0:
-                            this->config->setMap("Resources/Levels/Dungeon 1.json");
-                            machine->pushState(new PlayState(config, *window, *machine));
-                            std::cout << "Play" << std::endl;
-                            break;
-                        case 1:
-                            machine->running = false;
-                            break;
-
-                        default:
-                            break;
-                    }
-                }
-
-            default:
-                break;
-
+            }
         }
     }
 
 
-    options[menuIndex].setColor(sf::Color::Red);
+    options[menuIndex].setFillColor(sf::Color::Red);
 
 }

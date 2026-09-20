@@ -51,5 +51,5 @@ void Config::setMap(const char *path)
 
 const char* Config::getMapPath() const
 {
-    return this->mapPath;
+    return this->mapPath.c_str();
 }

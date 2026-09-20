@@ -23,8 +23,8 @@ public:
 protected:
     sf::Texture backGroundTexture;
     sf::Sprite backGround;
-    sf::Text title;
     sf::Font title_font;
+    sf::Text title;
 };
 
 

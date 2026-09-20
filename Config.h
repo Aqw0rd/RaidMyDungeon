@@ -27,7 +27,7 @@ protected:
     std::string spritePath;
     std::string imagePath;
     std::string resourcePath;
-    const char* mapPath;
+    std::string mapPath;
 
 };
 

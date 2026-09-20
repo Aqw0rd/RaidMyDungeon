@@ -13,7 +13,7 @@ App::App()
 {
     this->config = new Config();        //Creating a new pointer of Config
     //Creating a new SFML window
-    this->window.create(sf::VideoMode(800,600), "Raid My Dungeon", sf::Style::Titlebar | sf::Style::Close);
+    this->window.create(sf::VideoMode(sf::Vector2u(800, 600)), "Raid My Dungeon", sf::Style::Titlebar | sf::Style::Close);
     this->window.setFramerateLimit(60);         // Setting the target(max) framerate to 60
     // Pushing the first state to the state machine
     this->machine.pushState(new IntroState(this->config, this->window, this->machine));
@@ -39,14 +39,22 @@ void App::run()
         float fps = 1.0f / (gametick.asSeconds());
 
         std::stringstream ss;
-        ss << (int)fps;
-        std::string s;
-        ss >> s;
-        window.setTitle(s);
+        ss << "Raid My Dungeon - FPS: " << (int)fps;
+        window.setTitle(ss.str());
+
+        State* state = machine.getState();
+        if (!state) break;              // State stack ran out; nothing left to run
+
         // Sending the gametick as milliseconds to the States update function
-        machine.getState()->update(gametick.asMilliseconds());
+        state->update(gametick.asMilliseconds());
+
+        // update() may have popped (and deleted) that very state, so re-fetch
+        // the current top of the stack rather than reusing the old pointer.
+        state = machine.getState();
+        if (!state) break;
+
         window.clear();                 // Clearing the SFML window
-        machine.getState()->draw();     // Calling the states draw function
+        state->draw();                  // Calling the states draw function
         window.display();               // Calling the display function of the window
     }
 }

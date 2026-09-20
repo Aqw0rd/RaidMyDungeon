@@ -9,7 +9,14 @@ StateMachine::StateMachine()
 
 }
 
-StateMachine::~StateMachine() {}
+StateMachine::~StateMachine()
+{
+    while (!this->state.empty())
+    {
+        delete this->state.back();
+        this->state.pop_back();
+    }
+}
 
 
 /**
@@ -27,7 +34,9 @@ void StateMachine::pushState(State *state)
  */
 void StateMachine::popState()
 {
-    auto *temp = this->state[this->state.size() - 1];
+    if (this->state.empty()) return;
+
+    auto *temp = this->state.back();
     this->state.pop_back();
     delete temp;
 }
@@ -40,6 +49,8 @@ void StateMachine::popState()
  */
 State* StateMachine::getState() const
 {
-    return this->state[this->state.size() - 1];
+    if (this->state.empty()) return nullptr;
+
+    return this->state.back();
 }
 

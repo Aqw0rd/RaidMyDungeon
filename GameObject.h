@@ -9,11 +9,12 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <vector>
 
 class GameObject {
 public:
     GameObject(sf::Vector2f pos, int maxHp, int maxEnergy, int lvl , float speed, const char * texturePath, int width, int height);
-    ~GameObject();
+    virtual ~GameObject();
     virtual void draw(sf::RenderWindow &window) = 0;        //Needs to be pure virtual, e.g = 0
     virtual void update(float gametick) = 0;
 
@@ -34,7 +35,7 @@ protected:
     int hp, energy, lvl;                    // stats of object
     float speed;
     sf::Texture texture;                    // Texture of object
-    sf::Sprite** sprite;                    // Sprite
+    std::vector<std::vector<sf::Sprite>> sprite; // Sprite
 
     int spriteX = 0, spriteY = 0;           // Spritesheet coords
     int width, height;

@@ -21,7 +21,7 @@ public:
 protected:
     int height = 0;
     int width = 0;
-    int layerCount;
+    int layerCount = 0;
     sf::Texture tileset;            // The texture cant be a local variable
     MapLayer *mapLayers = nullptr;
 

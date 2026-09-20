@@ -33,23 +33,22 @@ void PlayState::update(float gametick)
 {
     this->player->update(gametick);
 
-    sf::Event event;
-    while( window->pollEvent(event ))
+    while (const std::optional event = window->pollEvent())
     {
-        this->player->eventHandler(event);
-        switch (event.type)
+        this->player->eventHandler(*event);
+
+        if (event->is<sf::Event::Closed>())
         {
-            case sf::Event::Closed:
-                machine->running = false;
-                break;
+            machine->running = false;
+        }
 
-            case sf::Event::KeyPressed:
-                if(event.key.code == sf::Keyboard::Escape){
-                    this->machine->popState();
-                }
-
-            default:
-                break;
+        if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+        {
+            if(keyPressed->code == sf::Keyboard::Key::Escape){
+                // popState() deletes this PlayState, so nothing after it may touch `this`.
+                this->machine->popState();
+                return;
+            }
         }
     }
 }

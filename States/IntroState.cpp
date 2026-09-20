@@ -14,16 +14,17 @@
  * @param machine
  */
 IntroState::IntroState(Config* &config, sf::RenderWindow &window, StateMachine &machine)
-            : State(config, window, machine)
+            : State(config, window, machine), backGround(backGroundTexture), title(title_font)
 {
     std::cout << "Introstate" << std::endl;
     //this->config = config;
     //this->window = &window;
     //this->machine = &machine;
-    backGroundTexture.loadFromFile("Resources/Images/intro.jpg");
+    if (!backGroundTexture.loadFromFile("Resources/Images/intro.jpg"))
+        std::cerr << "Failed to load intro background image" << std::endl;
     backGround.setTexture(backGroundTexture, true);
-    backGround.setScale( (float) (config->getResolution().x) / (float) (backGroundTexture.getSize().x) ,
-                         (float) (config->getResolution().y) / (float) (backGroundTexture.getSize().y) );
+    backGround.setScale( sf::Vector2f((float) (config->getResolution().x) / (float) (backGroundTexture.getSize().x) ,
+                         (float) (config->getResolution().y) / (float) (backGroundTexture.getSize().y)) );
 }
 
 IntroState::~IntroState()
@@ -39,20 +40,17 @@ void IntroState::draw()
 void IntroState::update(float gametick)
 {
 
-    sf::Event event;
-    while( window->pollEvent( event ))
+    while (const std::optional event = window->pollEvent())
     {
-        switch( event.type )
+        if (event->is<sf::Event::Closed>())
         {
-            case sf::Event::Closed:
-                machine->running = false;
-                break;
+            machine->running = false;
+        }
 
-            case sf::Event::KeyPressed:
-                if(event.key.code == sf::Keyboard::Space)
-                    machine->pushState(new MainMenuState(config, *window, *machine));
-            default:
-                break;
+        if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>())
+        {
+            if (keyPressed->code == sf::Keyboard::Key::Space)
+                machine->pushState(new MainMenuState(config, *window, *machine));
         }
     }
 

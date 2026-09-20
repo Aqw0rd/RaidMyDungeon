@@ -2,7 +2,7 @@
 // Created by andershorgen on 2/15/18.
 //
 
-#include <iostream>
+#include <stdexcept>
 #include "GameObject.h"
 
 
@@ -12,34 +12,33 @@ GameObject::GameObject(sf::Vector2f pos, int maxHp, int maxEnergy, int lvl, floa
     this->pos = pos;
     this->maxHp = maxHp;
     this->maxEnergy = maxEnergy;
+    this->hp = maxHp;
+    this->energy = maxEnergy;
     this->lvl = lvl;
     this->width = width;
     this->height = height;
     this->speed = speed;
 
     int scale = 2;
-    texture.loadFromFile(texturePath);
+    if (!texture.loadFromFile(texturePath)) {
+        throw std::runtime_error("Failed to load texture: " + std::string(texturePath));
+    }
     tilewidth = texture.getSize().x / width;
     tileheight = texture.getSize().y / height;
 
-    this->sprite = new sf::Sprite* [tilewidth];         // Creating the spritesheet
+    this->sprite.resize(tilewidth);                     // Creating the spritesheet
     for(int x = 0; x < tilewidth; x++){
-        this->sprite[x] = new sf::Sprite [tileheight];
+        this->sprite[x].reserve(tileheight);
         for(int y = 0; y < tileheight; y++){
-            this->sprite[x][y].setTexture(texture);
-            this->sprite[x][y].setTextureRect(sf::IntRect(x*width, y*height, width, height));
-            this->sprite[x][y].scale(scale,scale);
+            this->sprite[x].emplace_back(texture);
+            this->sprite[x][y].setTextureRect(sf::IntRect(sf::Vector2i(x*width, y*height), sf::Vector2i(width, height)));
+            this->sprite[x][y].scale(sf::Vector2f(scale, scale));
         }
     }
 
 }
 
-GameObject::~GameObject()
-{
-    for(int i = 0; i < tilewidth; i++)
-        delete [] this->sprite[i];
-    delete [] this->sprite;
-}
+GameObject::~GameObject() = default;
 
 sf::Vector2f GameObject::getPosition() const { return this->pos; }
 sf::Vector2f GameObject::getVelocity() const { return this->vel; }

@@ -2,7 +2,6 @@
 // Created by andershorgen on 2/17/18.
 //
 
-#include <iostream>
 #include <math.h>
 #include "Player.h"
 #include "../Items/Weapons/IronSword.h"
@@ -32,7 +31,7 @@ void Player::draw(sf::RenderWindow &window)
 
     if(angle <= 45 && angle > -45)          this->spriteY = right;
     else if(angle <= 135 && angle > 45)     this->spriteY = down;
-    else if(angle >= -135 && angle > 135)   this->spriteY = left;
+    else if(angle > 135 || angle <= -135)   this->spriteY = left;
     else if(angle <= -45 && angle > -135)   this->spriteY = up;
 
     /** ----------------------- **/
@@ -64,23 +63,23 @@ void Player::update(float gametick)
  */
 void Player::eventHandler(sf::Event event)
 {
-    if(event.type == sf::Event::KeyPressed)
+    if(const auto* keyPressed = event.getIf<sf::Event::KeyPressed>())
     {
-        switch(event.key.code)
+        switch(keyPressed->code)
         {
-            case sf::Keyboard::W:
+            case sf::Keyboard::Key::W:
                 this->keys[1] = true;   // Up
                 break;
 
-            case sf::Keyboard::A:
+            case sf::Keyboard::Key::A:
                 this->keys[0] = true;   // Left
                 break;
 
-            case sf::Keyboard::S:
+            case sf::Keyboard::Key::S:
                 this->keys[3] = true;   // Down
                 break;
 
-            case sf::Keyboard::D:
+            case sf::Keyboard::Key::D:
                 this->keys[2] = true;   // Right
                 break;
 
@@ -90,23 +89,23 @@ void Player::eventHandler(sf::Event event)
         }
     }
 
-    if(event.type == sf::Event::KeyReleased)
+    if(const auto* keyReleased = event.getIf<sf::Event::KeyReleased>())
     {
-        switch(event.key.code)
+        switch(keyReleased->code)
         {
-            case sf::Keyboard::W:
+            case sf::Keyboard::Key::W:
                 this->keys[1] = false;
                 break;
 
-            case sf::Keyboard::A:
+            case sf::Keyboard::Key::A:
                 this->keys[0] = false;
                 break;
 
-            case sf::Keyboard::S:
+            case sf::Keyboard::Key::S:
                 this->keys[3] = false;
                 break;
 
-            case sf::Keyboard::D:
+            case sf::Keyboard::Key::D:
                 this->keys[2] = false;
                 break;
 
@@ -115,11 +114,11 @@ void Player::eventHandler(sf::Event event)
         }
     }
 
-    if(event.type == sf::Event::MouseButtonPressed)
+    if(const auto* mousePressed = event.getIf<sf::Event::MouseButtonPressed>())
     {
-        switch (event.mouseButton.button)
+        switch (mousePressed->button)
         {
-            case sf::Mouse::Left:
+            case sf::Mouse::Button::Left:
                 this->weapon->strike();
                 break;
 
