@@ -1,15 +1,17 @@
 # Raid My Dungeon
 
-A small 2D dungeon-crawler prototype written in C++17 with SFML 3. This was an early hobby/learning project (built ~January–November 2018) exploring game architecture patterns: a state machine, a `GameObject`/`Item`/`Ability` class hierarchy, and Tiled-based map loading.
+A small 2D dungeon-crawler prototype written in C++17 with SFML 3. This was an early hobby/learning project (built ~January–November 2018), picked back up as the start of a roguelike dungeon-crawler with data-driven loot and (eventually) community-designed, shareable dungeons.
 
-It's an unfinished prototype rather than a playable game — there's a main menu, a movable player character on a loaded dungeon map, and the beginnings of an item/weapon/ability system.
+It's an unfinished prototype rather than a playable game — there's a main menu, a movable player character on a loaded dungeon map, and a data-driven item/gear system with no inventory UI yet. See [`docs/plans/`](docs/plans/) for what's actively being worked on.
 
 ## Features
 
 - **State machine** driving the app: `IntroState` → `MainMenuState` → `PlayState`, with states pushed/popped on a stack (`StateMachine`).
 - **Tile-based maps** loaded from [Tiled](https://www.mapeditor.org/) JSON exports (`Resources/Levels/`) via `jsoncpp`, rendered layer by layer (`Map` / `MapLayer`).
 - **Player character** with WASD movement (including normalized diagonal movement), sprite-sheet walk animation, and mouse-driven facing direction.
-- **Item / Weapon / Ability scaffolding**: a base `GameObject` class, an `Item` → `Weapon` → `IronSword` hierarchy, and an `Ability` → `Melee` → `NormalAttack` hierarchy, intended as the foundation for combat.
+- **Data-driven items** (`ItemDef`/`ItemDatabase`): weapons and gear are defined in `Resources/Items/*.json`, not C++ classes — adding a new item needs no new code.
+- **Layered ("paperdoll") gear rendering**: `GameObject` composites a body sprite with optional Legs/Chest/Head layers sharing the same animation grid, so equipped gear changes the character's appearance without redrawing it. A single generic `EquippedWeapon` class (not one class per weapon) renders and swings whatever's equipped.
+- **`Ability`/`Melee`/`NormalAttack` scaffolding**: unused so far, intended as the foundation for a future ability system.
 - **Framerate-independent updates** — movement speed is scaled by the frame's gametick so gameplay doesn't speed up/slow down with FPS.
 
 ## Controls
@@ -30,12 +32,15 @@ App.*                 Owns the SFML window, Config, and StateMachine
 Config.*               Global settings (resolution, resource paths, current map)
 State.*, StateMachine.* Base state class and the state stack
 States/                IntroState, MainMenuState, PlayState
-GameObject.*           Base class for anything with position/HP/energy/sprite
+ResourceManager.*      Shared, cached texture loading
+GameObject.*           Base class for anything with position/HP/energy/layered sprites
 Objects/Player.*       Player-specific movement, animation, and input handling
-Item.*, Items/         Item base class, Weapon base class, IronSword
-Ability.*, Abilities/  Ability base class, Melee base class, NormalAttack
+ItemDef.*, ItemDatabase.* Data-driven item definitions, loaded from Resources/Items/*.json
+Items/EquippedWeapon.* Generic weapon rendering/swinging, driven by an ItemDef
+Ability.*, Abilities/  Ability base class, Melee base class, NormalAttack (unused scaffolding)
 Map.*, MapLayer.*      Tiled JSON map loading and rendering
-Resources/             Fonts, sprites, images, and Tiled level files
+Resources/             Fonts, sprites, images, item definitions, and Tiled level files
+docs/plans/             In-progress feature plans, with a step-by-step status tracker
 ```
 
 ## Building
@@ -72,9 +77,12 @@ Run the resulting binary from the project root (or copy it there) so it can find
 
 ## Known limitations
 
-This was a learning project and was left unfinished:
-
-- No combat is actually resolved yet — the `Ability`/`Weapon` classes exist but a strike doesn't deal damage.
+- No combat is actually resolved yet — a strike swings the weapon but doesn't deal damage.
+- There's no inventory or equipment UI yet — `PlayState`'s constructor hardcodes a fixed set of test items onto the player at spawn. See [`docs/plans/weapon-and-gear-system.md`](docs/plans/weapon-and-gear-system.md) for the in-progress plan.
 - Only one level (`Dungeon 1.json`) exists, and there's no win/lose condition.
-- `Item` isn't actually the parent of `Weapon` despite the naming (`Weapon` duplicates its own texture/sprite members instead of inheriting), and `Item`'s constructor is declared but never defined — it's dead code left over from an earlier design.
-- The `Ability`/`Melee`/`NormalAttack` hierarchy isn't wired into `Player` or `Weapon` yet; it's unused scaffolding for a future ability system.
+- The `Ability`/`Melee`/`NormalAttack` hierarchy isn't wired into `Player` or `EquippedWeapon` yet; it's unused scaffolding for a future ability system.
+- The gear art in `Resources/Sprites/Gear/` is placeholder (flat colored blocks), not real art.
+
+## In-progress plans
+
+- [`docs/plans/weapon-and-gear-system.md`](docs/plans/weapon-and-gear-system.md) — data-driven weapons/gear, paperdoll rendering, inventory. Each plan file has a step-by-step progress tracker at the top, so a new session can see what's done and what's next at a glance.

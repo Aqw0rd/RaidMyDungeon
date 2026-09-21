@@ -7,8 +7,10 @@
 
 
 #include <SFML/Window/Event.hpp>
+#include <memory>
 #include "../GameObject.h"
-#include "../Items/Weapon.h"
+#include "../ItemDef.h"
+#include "../Items/EquippedWeapon.h"
 
 class Player : public GameObject{
 public:
@@ -20,11 +22,14 @@ public:
     void movement();
     void animation(float gametick);
 
+    // Equips the given weapon item, or unequips (bare hands) if def is nullptr.
+    void equipWeapon(const ItemDef *def);
+
 protected:
     bool keys[4] = {false,false,false,false};
     int animationTime = 80, animationCounter = 0;
     bool walking = false;
-    Weapon *weapon;
+    std::unique_ptr<EquippedWeapon> weapon;   // nullptr => unarmed
 };
 
 

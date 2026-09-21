@@ -4,22 +4,25 @@
 
 #include <math.h>
 #include "Player.h"
-#include "../Items/Weapons/IronSword.h"
 
 # define M_PI           3.14159265358979323846
 
 Player::Player(sf::Vector2f pos, int maxHp, int maxEnergy, int lvl, float speed, char const* texturePath, int width, int height)
     : GameObject(pos, maxHp, maxEnergy, lvl, speed, texturePath, width, height)
 {
-    this->weapon = new IronSword("Resources/Sprites/Weapons/sword_iron.png", *this);
 }
 
 Player::~Player() = default;
 
+void Player::equipWeapon(const ItemDef *def)
+{
+    this->weapon = def ? std::make_unique<EquippedWeapon>(*def, *this) : nullptr;
+}
+
 void Player::draw(sf::RenderWindow &window)
 {
-    window.draw(this->sprite[this->spriteX][this->spriteY]);
-    this->weapon->draw(window);
+    this->drawLayers(window);
+    if(this->weapon) this->weapon->draw(window);
 
 
     /** Temporary mouse handler **/
@@ -52,9 +55,9 @@ void Player::update(float gametick)
     animation(gametick);
     this->pos.x += this->vel.x * multiplier;
     this->pos.y += this->vel.y * multiplier;
-    sprite[this->spriteX][this->spriteY].setPosition(this->pos);
+    this->setLayersPosition(this->pos);
 
-    this->weapon->update(gametick);
+    if(this->weapon) this->weapon->update(gametick);
 }
 
 /**
@@ -119,7 +122,7 @@ void Player::eventHandler(sf::Event event)
         switch (mousePressed->button)
         {
             case sf::Mouse::Button::Left:
-                this->weapon->strike();
+                if(this->weapon) this->weapon->strike();
                 break;
 
 

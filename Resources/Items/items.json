@@ -1,0 +1,34 @@
+[
+    {
+        "id": "iron_sword",
+        "name": "Iron Sword",
+        "slot": "weapon",
+        "attackBonus": 5,
+        "sprite": "Resources/Sprites/Weapons/sword_iron.png",
+        "attackPattern": "slash",
+        "gripX": 13,
+        "gripY": 13,
+        "restAngle": 225
+    },
+    {
+        "id": "leather_helm",
+        "name": "Leather Helm",
+        "slot": "head",
+        "defenseBonus": 1,
+        "sprite": "Resources/Sprites/Gear/head_test.png"
+    },
+    {
+        "id": "leather_chest",
+        "name": "Leather Chestpiece",
+        "slot": "chest",
+        "defenseBonus": 2,
+        "sprite": "Resources/Sprites/Gear/chest_test.png"
+    },
+    {
+        "id": "leather_legs",
+        "name": "Leather Leggings",
+        "slot": "legs",
+        "defenseBonus": 1,
+        "sprite": "Resources/Sprites/Gear/legs_test.png"
+    }
+]

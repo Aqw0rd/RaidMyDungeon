@@ -4,6 +4,7 @@
 
 #include "App.h"
 #include "States/IntroState.h"
+#include "ItemDatabase.h"
 #include <SFML/Window/Event.hpp>
 #include <sstream>
 #include <iostream>
@@ -12,6 +13,7 @@
 App::App()
 {
     this->config = new Config();        //Creating a new pointer of Config
+    ItemDatabase::loadFromFile("Resources/Items/items.json");   // Load all item/gear/weapon definitions once at startup
     //Creating a new SFML window
     this->window.create(sf::VideoMode(sf::Vector2u(800, 600)), "Raid My Dungeon", sf::Style::Titlebar | sf::Style::Close);
     this->window.setFramerateLimit(60);         // Setting the target(max) framerate to 60
